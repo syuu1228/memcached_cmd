@@ -55,10 +55,10 @@ int main(int argc, char **argv)
 	}
 	close(fd);
 
-	rc = memcached_set(memc, key, strlen(key), buf, st.st_size, (time_t)0, (uint16_t)0);
+	rc = memcached_set(memc, key, strlen(key), buf, st.st_size, (time_t)0, (uint32_t)0);
 
 	if (rc != MEMCACHED_SUCCESS) {
-		fprintf(stderr, "memcached_get err:%d\n", rc);
+		fprintf(stderr, "memcached_set err:%d\n", rc);
 		return -1;
 	}
 

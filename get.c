@@ -9,7 +9,7 @@ int main(int argc, char **argv)
 	struct memcached_st *memc;
 	struct memcached_server_st *servers;
 	memcached_return rc;
-	uint16_t flags;
+	uint32_t flags;
 	size_t reslen;
 	char *server = argv[1];
 	char *key = argv[2];
